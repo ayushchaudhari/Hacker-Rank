@@ -10,7 +10,7 @@ And then after sorting both the vectors I comapared that if both the vectors are
 
 
 Example for explanation: Take an random example which can or cannot be there in the test case(i don't know :) ) to understand the above statement:
-	     ball_type ⟶    0	  1    2    3      
+	     ball_type ⟶    0	 1    2    3      
 		containers(⬇)
 		     0		     2    3    0    1	⟶total(in container 0)=6	
 		     1		     2    2    1    0   ⟶total(in container 1)=5
