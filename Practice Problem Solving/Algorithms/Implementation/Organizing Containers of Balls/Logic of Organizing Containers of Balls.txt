@@ -1,0 +1,30 @@
+Logic-
+
+The logic used to solve this problem is just I first observed for any swap process to happen easily between 2 containers first it should be confirmed that the container can keep that much balls in it or not. If it can keep then it is possible to organize the balls in containers else it is impossible. And the above statement is just for all the containers and all the type of balls.
+i.e The number of balls of each type in a container can exchanged only and only if there are same number of balls corresponding to that container present else it is obviously not possible that there 5 balls in container 1 of different type and they can be swapped with 4 balls of the type correponding to that container.
+
+So what I did is I just calculated the total numbers of different balls in each container and pushed the value for each container in the vector named container_capacity.
+Also I calulated the total number of balls of same type and pushed the value for each ball_type in the vector named balls_of_a_type.
+
+And then after sorting both the vectors I comapared that if both the vectors are equal then the full process of organizing balls by swapping is possible else not as per the given rules in the problem.
+
+
+Example for explanation: Take an random example which can or cannot be there in the test case(i don't know :) ) to understand the above statement:
+	     ball_type ⟶    0	  1    2    3      
+		containers(⬇)
+		     0		     2    3    0    1	⟶total(in container 0)=6	
+		     1		     2    2    1    0   ⟶total(in container 1)=5
+		     2		     2    0    0    1	⟶total(in container 2)=3
+		     3		     0    0    2    0	⟶total(in container 3)=2
+			Total	    ⬇(6) ⬇(5) ⬇(3) ⬇(2)    				
+
+
+Now on this if you try it is possible to organize containers by performing some swaps.
+As we get {2,3,5,6}=={2,3,5,6} after sorting the answer is "Possible" and if we have not got them equal then the answer would be "Impossible".
+
+-> Why to sort as {6,5,3,2} also equal {6,5,3,2} simply?
+-> Now in some special cases it is also possible that the elements would be equal but the position is different so in that case also the organizing container is possible. So to make the compare easy we just use sort else you can also select each element from containers_capacity and find it in balls_of_a_type(i.e the two vectors you made) if you get it then continue else return "Impossible", and then after completion of checking the every element you can return "Possible". 
+
+
+Thanks,
+Ayush Chaudhari
