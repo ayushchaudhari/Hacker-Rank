@@ -1,0 +1,13 @@
+Logic for problem @ https://www.hackerrank.com/challenges/kaprekar-numbers/problem -
+
+You will get it if you have seen my code still but for them who are here to learn first and wanna code by themselves I am explaining the logic for the Kaprekar numbers Problem.
+Now Kaprekar numbers are like n=99 having pow(99,2)=9801 and we have to divide it in 2 parts that are left and right part. Now the condition is right part!=0 ever && (right part's digit==digits of number n=99). So as 99 have 2 digits we divide 9801 as right part=01 or 1 and left part=98. Now for 99 to Kaprekar number right part+left part should equal to number n i.e. 99. As 98+1=n=99 therfore 99 is a Kaprekar's number.
+Now frame this same in logic in code. Now for i=p to q first I calculated isquare=i^2(isquare is a variable used for storing i's square) for every i. Then I found how many digits i has. Then I divided the isquare in 2 parts where right part= isquare/1000 for 3 digit i or isquare/100 for 2 digit i. So if we see carefully we get that if we divide isquare by 10^digits of i then we get the right part. And similarly if we do i%pow(10,digits) then you will get right part if you think.
+Then all is over is the left+right == number(i) and right!=0 then just print i else do not print i.
+But still you might get wrong answer because we have not define anything if no Kaprekar's number exits between p to q. And as given in question we have to print "INVALID RANGE" at least for hacker rank question I would say, else ignore if you not have this condition. So you can just use a state change concept here by using a variable initially set to 0 at beginning and then just set it to 1 when you print the first number. And then add a condition at last i.e. if(state==0) then print "INVALID RANGE".
+
+
+Thanks for your patience,
+Follow me on Github @ https://github.com/ayushchaudhari
+Follow me on Hacker Rank @Ayush_Chaudhari
+Ayush Chaudhari
