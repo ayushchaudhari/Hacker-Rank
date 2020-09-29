@@ -1,0 +1,14 @@
+Logic for problem @ https://www.hackerrank.com/challenges/acm-icpc-team/problem -
+
+Now in this problem we just have to find the maximum count of known topics/subjects by any two person team and how many ways we can make the team having knowledge of maximum topics.
+So what I did is I just got a sense that if one out of 2 person knows the topic its counted or also if both knows the topic then also it is counted but the topic that is not known by anyone is not counted.
+Then I just used the above given condition for every subjects/topics on each 2 person team possible as per permutation.
+So just what I did is I kept storing the count of subjects known for every 2 person team that was possible as per permutation. And keeping the track of maximum known subjects by any team at the same time. 
+Then just at last as we have found above the maximum number of subjects known so just I found that how many teams has there known subjects/topics count equal to maximum count, so that is the number of teams possible which must have that maximum count of topics known.
+So yeah we have found max count of known subjects by a 2 player team and also the number of team that are having that count.
+
+
+Thanks for your patience,
+Follow me on Github @ https://github.com/ayushchaudhari
+Follow me on Hacker Rank @Ayush_Chaudhari
+Ayush Chaudhari
