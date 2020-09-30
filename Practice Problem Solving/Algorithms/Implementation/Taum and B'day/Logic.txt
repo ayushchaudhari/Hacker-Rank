@@ -1,0 +1,20 @@
+Logic for problem @ https://www.hackerrank.com/challenges/taum-and-bday/problem
+
+So just before explaining the logic see the terms used in question given below-
+b- number of black gifts
+b- number of white gifts
+bc- cost of 1 black gift
+wc- cost of 1 white gift
+z- cost of converting either from b to w or w to b
+
+Output we have to give is- minimum amount of units Taum needs to spend on gifts.
+
+So I found in the explaination given in the question that still if we convert a gift from b to w (i.e black to white) the cost will be z+wc i.e converting cost + cost of white and vice versa.
+So what I get from this is if cost of black gift b i.e. bc is greater than the cost of wc+z(i.e bc>wc+z) then we should convert the b to w gift else we should buy the b gift at bc price itself. And this same goes when converting from w to b i.e for conveting w gift to b gift we should have bc+z<wc.
+So just this guys convert this logic to code by returning the total cost= (b*min(bc,wc+z))+(w*min(wc,bc+z)).
+
+Thanks for your patience,
+Follow me on Github @ https://github.com/ayushchaudhari
+Follow me on Hacker Rank @Ayush_Chaudhari
+Queries Related to Logic or code  @ https://www.linkedin.com/in/ayush-chaudhari/
+Ayush Chaudhari
