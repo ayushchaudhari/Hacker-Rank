@@ -1,0 +1,20 @@
+Logic for problem @ https://www.hackerrank.com/challenges/queens-attack-2/problem
+
+Just the idea is to first find the obstacle which is closest to the queen in all 8 directions where queen can attack, then just subtracting that 8 square along with the squares behind that 8 squares from the total squares where the queen can attack without any obstacle.
+
+What I did? (Fully)
+I first calculated that how many squares the queen can attack if there is no obstacle present on n x n chess board. The equation for the same is given below.
+//equation
+totalSquaresForAttack=(n-r_q)+(r_q-1)+(c_q-1)+(n-c_q)+min((n-r_q),(c_q-1))+min((r_q-1),(c_q-1))+min((n-r_q),(n-c_q))+min((r_q-1),(n-c_q));
+
+Then what I did is I found the obstacle which are closest to the queen and saved all of that 8 obstacle of 8 direction in which queen can attacked in the vector named reframed_obstacle.
+
+Then we can understand if we think here that the reframed_obstacles present in all 8 different directions of the queen cannot be attacked as well as the squares behind the obstacles can also not attacked by the queen.
+So I just subtracted that all squares which cannot be attacked from the total squares where the queen can attack without any obstacle(that we have have found using the equation. 
+
+
+Thanks for your patience,
+Follow me on Github @ https://github.com/ayushchaudhari
+Follow me on Hacker Rank @Ayush_Chaudhari
+Queries Related to Logic or code  @ https://www.linkedin.com/in/ayush-chaudhari/
+Ayush Chaudhari
