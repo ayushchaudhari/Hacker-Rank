@@ -1,6 +1,7 @@
-//Problem @ https://www.hackerrank.com/challenges/queens-attack-2
+//Problem @ https://www.hackerrank.com/challenges/queens-attack-2/problem
 //A CPP Solution by Ayush Chaudhari
 //Time Complexity=O(k)
+//Logic Explained @ https://git.io/JU7SJ
 
 #include <bits/stdc++.h>
 

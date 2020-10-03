@@ -1,6 +1,7 @@
-//Problem @ https://www.hackerrank.com/challenges/queens-attack-2
+//Problem @ https://www.hackerrank.com/challenges/queens-attack-2/problem
 //A CPP Function by Ayush Chaudhari
 //Time Complexity=O(k)
+//Logic Explained @ https://git.io/JU7SJ
 
 int queensAttack(int n, int k, int r_q, int c_q, vector<vector<int>> obstacles) {
     /*Equation to count how many squares a queen can attack from a given position on (nxn)size chess board without any obstacle*/
