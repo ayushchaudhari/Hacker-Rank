@@ -1,0 +1,12 @@
+Logic for problem @ https://www.hackerrank.com/challenges/beautiful-triplets/problem
+
+
+The logic is just I did found the index i & j where arr[j]-arr[i]==d and i<j. Then after getting i & j , I found the k where is k>j>i such that arr[k]-arr[j]==2*d if we got that then I did count++ else do nothing. And kept this continuing till we do this for the whole array i.e we have to check for all j where arr[j]-arr[i]==d and then for all k where arr[k]-arr[i]==2*d.
+
+This is very simple problem but I do think that I have done it some what complex but you can also do it just by using count_if and find() function. The code might get small but the time complexity will remain moreover same. Also the logic remains same if you apply count_if function.
+
+Thanks for your patience,
+Follow me on Github @ https://github.com/ayushchaudhari
+Follow me on Hacker Rank @Ayush_Chaudhari
+Queries Related to Logic or code  @ https://www.linkedin.com/in/ayush-chaudhari/
+Ayush Chaudhari
