@@ -1,0 +1,11 @@
+Logic for problem @ https://www.hackerrank.com/challenges/equality-in-a-array/problem
+
+
+In this what I did is I just found the number which has the maximum count in the array.
+For example: Let the vector/array be -{3,3,2,1,3,2,3}. Now here as you can sense that we can equalize the array in just minimum of 3 operations and after equalize it would be like {3,3,3,3} and {2,1,2} will be deleted which takes 3 operations. So what I am telling you to do is to find the count of the every element and save it in the a seperate array and then find the maximum count from it. Then just return the operations required as arr.size()- maxCount. As for above example if you see the element 3 is coming maximum time i.e. 4 times therefore the maxCount of any element would be 4 therefore just the answer that is minimum_operation_required = arr.size()-maxCount i.e. 7-4=3. That's all just implement this through code. 
+
+Thanks for your patience,
+Follow me on Github @ https://github.com/ayushchaudhari
+Follow me on Hacker Rank @Ayush_Chaudhari
+Queries Related to Logic or code  @ https://www.linkedin.com/in/ayush-chaudhari/
+Ayush Chaudhari
