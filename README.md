@@ -9,7 +9,11 @@
  Also your thoughts are welcome regarding any kind of improvement in the code as well as the logic explaination.
  
  Social Handles-
+ 
  Follow me on Github @ https://github.com/ayushchaudhari
+ 
  Queries Related to Logic or code  @ https://www.linkedin.com/in/ayush-chaudhari/
+ 
  Follow me on Hacker Rank @Ayush_Chaudhari
+ 
  Ayush Chaudhari
