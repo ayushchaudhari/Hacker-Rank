@@ -8,7 +8,7 @@
  They might read my logics and understand the solution.
  Also your thoughts are welcome regarding any kind of improvement in the code as well as the logic explaination.
  
- Social Handles-
+ My Social Handles-
  
  Follow me on Github @ https://github.com/ayushchaudhari
  
