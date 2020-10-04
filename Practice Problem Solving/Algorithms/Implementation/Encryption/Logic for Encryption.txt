@@ -1,0 +1,75 @@
+Logic for problem @ https://www.hackerrank.com/challenges/encryption/problem
+
+I just found the the ceiling and flooring value for the root of given string size. 
+Ceil function round off to next possible integer.
+Floor function round off to the previous integer possible.
+
+Now ceil(sqrt(string_size))->coloumn as (ceil value > floor value)
+floor(sqrt(string_size))->row
+
+As per given condition ceil(sqrt(string_size))* floor(sqrt(string_size) should always remain greater than equal to string_size and if not make both row & coloumn as ceil(string_size) to satify the above condition.
+
+Now after that if floor value * ceil>= string_size then just for i from 0 to ceil value-1 just keep increamenting the j by ceil value each type in another loop inside the above for loop and insert a[j] in a new string and after completion of the loop of j just push ' ' this in between to seperate the .
+
+Then just after doing all just return the string and print it , it is the encrypted string.
+
+--------------------------------------------------------------------------------
+Example=>"haveaniceday" size =12 
+1. find floor(sqrt(size))=3
+2. find ceil(sqrt(size))=4
+3. check if 3*4>=12 satisfied then just for i=0 to i<ceil value i.e.for i=0 to i<4 the primary loop keep executing and inside it for j=i to j<string_size and incrementing j each time by ceil value.
+//else if not satisfied then make floor value =ceil value and then again take the flow up.
+
+step 1. i=0 ,j=0 to j< string size
+			j=0-> insert(a[j]) in new_string
+				So, newstring="h"
+			j=j+ceil=0+4=4-> insert(a[j]) in new_string
+				So, newstring="ha"
+			j=j+ceil=4+4=8-> insert(a[j]) in new_string
+				So, newstring="hae"
+			j=8+4=12 since now j!<string size therefore loop ends
+			therefore insert ' '
+				So, newstring="hae "
+
+step 2. i=1 ,j=1 to j< string size
+       		 j=1-> insert(a[j]) in new_string
+				So, newstring="hae a"
+			 j=j+ceil=1+4=5-> insert(a[j]) in new_string
+				So, newstring="hae an"
+			 j=j+ceil=5+4=9-> insert(a[j]) in new_string
+				So, newstring="hae and"
+			 j=9+4=13 since now j!<string size therefore loop ends
+			 therefore insert ' '
+				So, newstring="hae and "
+
+step 3. i=2 ,j=2 to j< string size
+       		 j=2-> insert(a[j]) in new_string
+				So, newstring="hae and v"
+			 j=j+ceil=2+4=6-> insert(a[j]) in new_string
+				So, newstring="hae and vi"
+			 j=j+ceil=6+4=10-> insert(a[j]) in new_string
+				So, newstring="hae and via"
+			 j=10+4=14 since now j!<string size therefore loop ends
+			 therefore insert ' '
+				So, newstring="hae and via "
+
+step 4. i=3 ,j=3 to j< string size
+       		 j=3-> insert(a[j]) in new_string
+				So, newstring="hae and via e"
+			 j=j+ceil=3+4=7-> insert(a[j]) in new_string
+				So, newstring="hae and via ec"
+			 j=j+ceil=7+4=11-> insert(a[j]) in new_string
+				So, newstring="hae and via ecy"
+			 j=11+4=15 since now j!<string size therefore loop ends
+			 therefore insert ' '
+				So, newstring="hae and via ecy "
+step 5. i=4 but (i=4)!<ceil value therefore loop ends
+step 6. return newstring and print that.
+--------------------------------------------------------------------------------
+
+
+Thanks for your patience,
+Follow me on Github @ https://github.com/ayushchaudhari
+Follow me on Hacker Rank @Ayush_Chaudhari
+Queries Related to Logic or code  @ https://www.linkedin.com/in/ayush-chaudhari/
+Ayush Chaudhari
