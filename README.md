@@ -1,4 +1,4 @@
-# Hacker Rank
+# Hacker-Rank Coded Solutions Repositery
  Contains Coded Solutions of the problems solved on Hacker Rank Platform.
  Contains-
  1. Full Logic Explaination which I have used to solve the problem.
