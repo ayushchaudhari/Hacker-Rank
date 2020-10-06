@@ -1,0 +1,43 @@
+Logic for problem @ https://www.hackerrank.com/challenges/minimum-distances/problem
+
+Data Structure used-
+1. Map
+2. Vector
+3. String
+
+Inbuilt Function used in function-
+1. {vector}.size()
+2. {map_name}.insert9) to insert key,value in map
+3. {map_name}.empty- to check map is empty or not
+4. pair<data_type,data_type>(a,b) to pass the key,value as a pair
+5. vector:find()-to find some specific element in vector
+6. min(variable,varible)- finds minimum of 2
+
+
+--------_____LOGIC_____-----
+What I did is I-
+1. As no difference between 2 different position of any vector be greater than or equal to its size. So what I did is to keep track of minimum distance, I defined and initialised a variable named minimum with value of vector size i.e. a.size().
+2. Now than the main logic starts from here.
+3. Then I think over what I have to do? So the answer is I just have to find the distance between two same elements and have to save then in minimum variable it that is actually minimum.
+4. So to do this if we think there might more than 2 same no. present like take a vector as example->a={1,2,3,4,2,1,5,1}. So in this there are count(1)=3 count (2)=2 and we not need count(3 & 4 )because single cannot make a pair.
+5. So if we see @ vector a then we would find that the minimum distance=1(between 1,1 in series 1,5,1 @ last).
+6. So now what I want to tell you is that there might be more than 2 or 3 pairs possible so how to deal with that.
+7. Simple answer is just for every element whose frequency>=2 extract the closest position from beginning where it is present than its next closest position; subtract them and you will get the distance. Now in next iteration start from the 2 closest position and get the next position where the same element is present. So if you think you might get than if element comes 2 times then we have to only do ceil(2/2)==1 iteration. If element comes 3 times we have to do ceil(3/2)==2 iteration and same.
+
+Steps for logic applied in code-
+
+1. I defined and initialized minimum variable with a.size() as I explained above.
+2. Then to know that of which element we can make pair of and that to how many pairs we can make I made a map which stores the element as a key and the value of total count/frequency is mapped to the key.
+And that to if the element has its frequency>=2 so that we are allowed to make pair. So for that only I saved the key and value respectively in map.
+3. Then I checked if the map is empty as if for no element its pair cannot be made then how can we find the distance. So as given in this case "return -1".
+4. If the map is not empty means there are some elements in vector 'a' of which pair can be made.
+5. So similarly as given above that how to find that how many pairs can be made are found by times=ceil(itr->second/2) where itr->second is the frequency of some element.
+6. Then same do iterate for all pairs in vector 'a' and keep track of minimum distance between position of 2 same elements/
+7. At end return the minimum value.   
+
+
+Thanks for your patience,
+Queries Related to Logic or code  @ https://www.linkedin.com/in/ayush-chaudhari/
+Follow me on Github @ https://github.com/ayushchaudhari
+Follow me on Hacker Rank @Ayush_Chaudhari
+Ayush Chaudhari
