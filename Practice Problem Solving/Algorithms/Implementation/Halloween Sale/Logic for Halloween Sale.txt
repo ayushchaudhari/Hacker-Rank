@@ -1,0 +1,50 @@
+O(n) Logic for problem @ https://www.hackerrank.com/challenges/halloween-sale/problem
+
+
+Data Structures Used-
+1. String
+2. Vector of String
+
+Functions used-
+1. stoi({string})- converts string to integer
+2. push_back() - to push char in string and string in vector_of_string
+3. floor()- used to round off the value to closest possible integer less than the value
+4. getline()- to take the whole string input in one line 
+
+---------------------LOGIC TERMINOLOGIES-------------------------
+
+1. Since given that you can buy a gift a some price p and next it decreases by d.
+2. And also if p-d is less than minimum price(m) then you have to take the price as m to buy all games from now.
+3. And obviously , our common sense suggests that we can only buy anything if we have that much amount else we cannot.
+4. And also I would tell you one more thing which would be used while explaining logic is like you have x money to spend on games and each games costing m price than how many you can buy the answer is x/m or floor(x/m).
+------------------------------END---------------------------------
+
+---------------------------LOGIC----------------------------------
+
+Now what I did is-
+
+1. I kept track of the current price of the games(i.e. p or I defined a specific variable for that),games buyed till now and total cost invested on games till now.
+
+2. And initially as the total_cost invested is 0 so initialize the variable with 0. Same for games buyed initially must be 0 so initialize it with 0. And the current_price of the game is given is p so initialize it with p.
+
+3. Now the thing is as I stated in logic terminology point 1 & 2 we have to continuesly buy the games till our money vanishes or we are not in condition to buy new game.
+
+4. So what I did in for every (total_cost+current_Cost)<=s I checked(s is total amount we have to invest on buying games)
+4.1 (As in terminology point 2)if current_cost>=m then do buy one game and increase games by 1. Add all allowances in total_Cost. Also decrease the current_price by d.
+NOTE - We are subtracting the d from current_cost one step before so that we get the cost for the next game we buy and also to check for next step using that
+4.2 else(means current_cost<m as we are doing (current_cost-d) one step earlier and we have not calulated any thing using this cost. But for only checking purpose we have defined the statement such that we can define a perfect else for that condition)
+Now else if current_cost<m-
+We have to make current_cost=m and also from now the cost for every game we buy would not change it will remain current_cost=m.
+So as stated in Terminology(point 4) we calculate the total games that we can buy from the remaining amount and directly add them in games_buyed and also add the cost of it in total_cost spended till now.
+After this break the loop else it is obvious that the loop will end if you think you will get that. Why to break or loop end automatically? as in this above step we have calculated the total games we can buy in remaining amount and added that in games_buyed.
+
+5. Just return the games_buyed. That's it!
+
+-----------------------------------------------------------------
+
+
+Thanks for your patience,
+Queries Related to Logic or code  @ https://www.linkedin.com/in/ayush-chaudhari/
+Follow me on Github @ https://github.com/ayushchaudhari
+Follow me on Hacker Rank @ Ayush_Chaudhari
+Ayush Chaudhari
