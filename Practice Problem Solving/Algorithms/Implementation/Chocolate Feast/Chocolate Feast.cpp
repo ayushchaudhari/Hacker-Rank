@@ -55,13 +55,12 @@ int main()
 vector<string> delete_space(string ncm_temp){
     vector<string> ncm;
 
-    for(size_t i=0,j=0;i<4;i++){
+    for(size_t i=0;i<ncm_temp.size();i++){
         string s;
-        while(ncm_temp[j]!=' ' && j<ncm_temp.size()){
-            s.push_back(ncm_temp[j]);
-            j++;
+        while(ncm_temp[i]!=' ' && i<ncm_temp.size()){
+            s.push_back(ncm_temp[i]);
+            i++;
         }
-        j++;
         ncm.push_back(s);
     }
     return ncm;
