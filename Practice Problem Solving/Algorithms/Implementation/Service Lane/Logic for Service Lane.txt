@@ -1,0 +1,38 @@
+Logic for problem @ https://www.hackerrank.com/challenges/service-lane/problem
+
+
+Data Structures Used-
+1. String
+2. Vector of String
+3. Vector of Integer
+
+Main Inbuilt Functions used-
+1. stoi({string})- converts string to integer
+2. push_back() - to push char in string and string in vector_of_string
+3. min(a,b)- returns the minimum value in a and b
+4. getline()- to take the whole string input in one line 
+
+
+---------------------------LOGIC----------------------------------
+
+1. This is not a difficult problem or that kind of problem on which you have to think so much. Its easy.
+
+2. So as we are given with the different width of the service lane in an vector and t test cases and each test case comprise of 2 indexes i,j and and we have to do everything b/w them.
+
+3. So we have to find the maximum width vehicle which can easily pass through all width of service lane for a certain test case(each test case has i & j in between them we have to do this).
+
+4. From 3rd point we get that, the service lane with lowest width between i to j(given) is the maximum width of the vehicle which can go through whole service lane.
+
+5. Just do the above steps for t test cases and keep pushing the minimum width of respective test case each time.
+
+6. At last just return the vector having minimum_width of vehicle which can go through.
+
+That's it!
+-----------------------------------------------------------------
+
+
+Thanks for your patience,
+Queries Related to Logic or code  @ https://www.linkedin.com/in/ayush-chaudhari/
+Follow me on Github @ https://github.com/ayushchaudhari
+Follow me on Hacker Rank @ Ayush_Chaudhari
+Ayush Chaudhari
