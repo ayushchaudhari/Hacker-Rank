@@ -1,0 +1,43 @@
+Logic for problem @ https://www.hackerrank.com/challenges/the-time-in-words/problem
+
+Data Structure used-
+1. Map
+2. String
+
+Inbuilt Function used in function-
+1. {map_name}.insert() to insert key,value in map
+2. pair<data_type,data_type>(a,b) to pass the key,value as a pair
+3. map:find()-to find if the key exits or not
+
+
+
+---------------------------------LOGIC---------------------------------
+The problem is very simple and easy just couple of if else or I can say an if-else ladder is involved in the solution.
+1. Just I used Map to store some numeber-hour to word-hour convertion and same for minutes to.
+2. You can make your logic easily just read this care fully-
+At ,minutes=0 use "o' clock". For i<=minutes<=30, use "past", and for minutes>30 use "to".
+Note-the space between the apostrophe and clock in o' clock.
+
+3. There are some examples like:
+	Accurate clock-
+		5:00 -->> five o' clock
+	minutes<=30
+		5:01 -->> one minute past five (see for one it is minute)
+		5:10 -->> ten minutes past five (now here it is minutes)
+		5:15 -->> quarter past five (this type has a accurate word instead of number word)
+		5:30 -->> half past five	(this type has a accurate word instead of number word)
+	minutes>30	(just do m=60-m and increase hour by 1 in this case)
+		5:35 -->> twenty five minute to six (m=60-m=25 and hour=hour+1=6 and to print 25 we can break it by using mod and divide functions in twenty five and just saving twenty in minutes map and five is already saved in hour map you can use that)
+		5:40 -->> twenty  minutes to six (m=60-m=20 and hour=hour+1=6 same as above)
+		5:57 -->> three minutes to six (m=60-m=3 and hour=hour+1 and rest same as above)
+		5:45 -->> quarter to six	(only this is exceptional here but same as done in min<=30. This type has a accurate word instead of number word just you have to do m=60-m=15 and use " to " with hour=hour+1=6)
+
+4. Just use and define the condition stated using above example and you are done. Its a very easy problem but some times things can get messy that's why I have explained this.
+		
+
+
+Thanks for your patience,
+Queries Related to Logic or code  @ https://www.linkedin.com/in/ayush-chaudhari/
+Follow me on Github @ https://github.com/ayushchaudhari
+Follow me on Hacker Rank @Ayush_Chaudhari
+Ayush Chaudhari
