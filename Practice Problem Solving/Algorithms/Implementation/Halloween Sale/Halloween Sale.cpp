@@ -58,14 +58,14 @@ int main()
 vector<string> delete_space(string pdms_temp){
     vector<string> pdms;
 
-    for(size_t i=0,j=0;i<4;i++){
+    for(size_t i=0;i<pdms_temp.size();i++){
         string s;
-        while(pdms_temp[j]!=' ' && j<pdms_temp.size()){
-            s.push_back(pdms_temp[j]);
-            j++;
+        while(pdms_temp[i]!=' ' && i<pdms_temp.size()){
+            s.push_back(pdms_temp[i]);
+            i++;
         }
-        j++;
         pdms.push_back(s);
     }
+    
     return pdms;
 }
