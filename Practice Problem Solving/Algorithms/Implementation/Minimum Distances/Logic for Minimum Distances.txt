@@ -7,14 +7,15 @@ Data Structure used-
 
 Inbuilt Function used in function-
 1. {vector}.size()
-2. {map_name}.insert9) to insert key,value in map
+2. {map_name}.insert() to insert key,value in map
 3. {map_name}.empty- to check map is empty or not
 4. pair<data_type,data_type>(a,b) to pass the key,value as a pair
 5. vector:find()-to find some specific element in vector
 6. min(variable,varible)- finds minimum of 2
 
 
---------_____LOGIC_____-----
+---------------------------------LOGIC---------------------------------
+
 What I did is I-
 1. As no difference between 2 different position of any vector be greater than or equal to its size. So what I did is to keep track of minimum distance, I defined and initialised a variable named minimum with value of vector size i.e. a.size().
 2. Now than the main logic starts from here.
