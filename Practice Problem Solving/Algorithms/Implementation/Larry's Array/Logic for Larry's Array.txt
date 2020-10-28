@@ -1,0 +1,33 @@
+Logic for problem @ https://www.hackerrank.com/challenges/larrys-array/problem
+
+
+Data Structures Used-
+1. String
+2. Vector of Integer
+
+Main Inbuilt Functions used-
+1. stoi({string})- converts string to integer
+2. push_back() - to push char in string and integer in vector_of_integer
+3. getline()- to take the whole string input in one line 
+4. size()- returns size of string and size of vector
+
+
+---------------------------LOGIC----------------------------------
+
+1. The simple logic is just find the total number of inversions possible initially.
+
+2. And if the total number of inversions are even then it is possible to sort the array else is not possible to sort the array.
+
+3. What is inversion?
+   Inversion Count for an array indicates – how far (or close) the array is from being sorted. If array is already sorted then inversion count is 0. If array is sorted in reverse order that inversion count is the maximum.
+   So to count total inversions in an array just you have to stisfy for every index i<j if a[i]>a[j] then it is count as 1 inversion.
+
+That's it!
+-----------------------------------------------------------------
+
+
+Thanks for your patience,
+Queries Related to Logic or code  @ https://www.linkedin.com/in/ayush-chaudhari/
+Follow me on Github @ https://github.com/ayushchaudhari
+Follow me on Hacker Rank @ Ayush_Chaudhari
+Ayush Chaudhari
