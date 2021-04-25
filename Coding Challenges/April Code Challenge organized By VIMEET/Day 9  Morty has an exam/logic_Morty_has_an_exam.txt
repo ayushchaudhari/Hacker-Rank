@@ -1,0 +1,74 @@
+n->has length of list a
+a -> has list of the list of integers a
+
+Aprroach->
+Check(if already sorted=="YES"):
+	print 0
+else:
+	here it is possible that either the sol can give -1 as its output
+	also possible that sol2 can give -1 as its output
+	so we have to handle that here
+	we can do this-
+
+	if(sol()==-1 and sol2()!=-1):
+		print(sol2())
+	elif(sol()!=-1 and sol()==-1):
+		print(sol())
+	elif(both returns -1 or returns any two different number):
+		then just print min(sol(),sol1())
+____________________________________________________________________
+Calling sol() will activate sol function:(arr is used for a in explanation maybe so ignore that)
+	basically sol function should take only array/list as its input but okay if n is passed,c can be defined inside the function itself
+	So ,sol(a,n)
+	we have to apply both the for loop again and again which can be done by using while
+	while(c<len(a)):
+		for loop for operation type1:
+		c+=1
+		check if array is sorted=="YES":
+			return c
+		for loop for operation type2:
+		c+=1
+		again check if array is sorted=="YES"
+			return c
+	after while completes means the number of operations exceeds the len(a) or n
+	check if(c>len(a)):
+		return -1
+______________________________________________________________________
+Calling sol2() will activate sol2 function:(arr is for array/list a in explanation maybe so ignore that)
+	basically sol2 function should take only array_copy/list_copy as its input but okay if n is passed,c can be defined inside the function itself
+	NOTE: just remember that your a is sorted so don't pass that make its copy by using for loop and append one by one as arr_copy=arr might cause pointer error which means arr_copy will point arr which is basically already sorted by sol()
+	So ,sol2(a_copy,n)
+	we have to apply both the for loop again and again which can be done by using while
+	while(c<len(a_copy)):
+		for loop for operation type2:
+		c+=1
+		again check if array is sorted=="YES"
+			return c
+		for loop for operation type1:
+		c+=1
+		check if array is sorted=="YES":
+			return c
+	NOTE:Notice the type of swapping operation are reversed here
+	after while completes means the number of operations exceeds the len(a_copy) or n
+	check if(c>len(a_copy)):
+		return -1
+-----------------------------------------------------------------------------
+
+
+Swapping operation type1:
+[m0,m1,m2,m3,m4,m5]
+so you can only swap element[even_index]  with its element[index+1] or vice versa
+
+explaination:
+m0<->m1
+m2<->m3
+m4<->m5
+
+Swapping operation type2:
+[m0,m1,m2,m3,m4,m5]
+ 
+explaination:
+m0<->m3
+m1<->m4
+m2<->m5
+
