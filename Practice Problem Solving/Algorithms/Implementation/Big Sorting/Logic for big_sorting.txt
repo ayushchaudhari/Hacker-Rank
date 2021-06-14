@@ -1,0 +1,36 @@
+Problem @ https://www.hackerrank.com/challenges/big-sorting/problem
+
+
+Data Structures Used-
+1. String
+2. Vector of String
+
+Main Inbuilt Functions used-
+1. sort({start_iterator},{end_iterator},{callback_function}) 
+2. push_back() - to push in String or vector of string
+3. size() - to get the size of vector
+4. stoi({string})- converts string to integer
+5. getline()- to take the whole string input in one line 
+
+
+Terminologies - 
+Big Num or Sorting big Integers can be stored using the vector of string instead of vector of integers as integers after a limit can't store the values(big int).
+
+
+---------------------------LOGIC----------------------------------
+Logic to sort the given vector of string containing each big int as a string is-
+1. Directly we can use the sort function with callback function check.
+2. Callback function check just checks two things - 
+	2.1 If the length of the big integer(string) is greater than the other string it means that string of greater length is bigger than the other one.
+	If the length of the string is less than the other than it is clear that the bigger length string is bigger.
+	2.3 If the length of both strings are same/equal then we have to compare both the strings and which is done using < or > symbol. It just compares the string char by char from first character and if first char is greater than it gives the result, if the first letter is equal then it gradually compares for the second charachter.
+
+That's it!
+-----------------------------------------------------------------
+
+
+Thanks for your patience,
+Follow me on Github @ https://github.com/ayushchaudhari
+Follow me on Hacker Rank @Ayush_Chaudhari
+Queries Related to Logic or code  @ https://www.linkedin.com/in/ayush-chaudhari/
+Ayush Chaudhari
