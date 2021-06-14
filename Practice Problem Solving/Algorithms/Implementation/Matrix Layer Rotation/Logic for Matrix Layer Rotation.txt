@@ -1,0 +1,84 @@
+Problem @ https://www.hackerrank.com/challenges/matrix-rotation-algo/problem
+
+Data Structures Used-
+1. String
+2. Vector of Integer
+3. 2D Vector of Integer(Matrix)
+4. List as queue
+5. Vector of List of Integer to store all the layers
+
+Main Inbuilt Functions used-
+1. ceil(a) - round off the value to smallest integer greater than a
+2. min(a,b) - returns minimum b/w a & b
+3. push_back() - to push in List or Vector
+4. pop_front() - to pop the front element of List
+5. size() - to get the size of list or vector
+6. stoi({string})- converts string to integer
+7. getline()- to take the whole string input in one line 
+
+
+Terminologies - 
+Layer of a Matrix??
+A layer of a Matrix contains the element at the edge of matrix which basically forms a rectangle/square shaped it connected by a line. It is the outmost layer and such layer are there in matrix as me go inside layer by layer diagonally.
+
+	layers example-
+
+	a11 <- a12 <- a13 <- a14 <- a15
+	 |							 |
+	a21    a22 <- a23 <- a24    a25
+     |		|			  |		 |
+	a31    a32 -> a33 -> a34    a35
+	 |							 |
+	a41 -> a42 -> a43 -> a44 -> a45
+
+	So there are 2 layers -
+	1st is - [a11,a21,a31,a41,a42,a43,a44,a45,a35,a25,a15,a14,a13,a12]
+	2nd is - [a22,a32,a33,a34,a24,a23]
+
+How many layers are there for that I derived a formula - 
+(**)total_layers in m*n matrix:
+		total_layers = ceil(min(m,n)/2)
+
+
+---------------------------LOGIC----------------------------------
+First Aprroach - (Solution @ )
+I broke the problem in 2 steps -
+1. First is to extract all the layers from the given m*n matrix in a 2D vector containing 1D list of layers.
+2. Rotating the list of the layers and after doing the appropriate number of rotation just input that layers as it is in matrix, in the same way as they were being extracted.
+
+Note-  So the four for loop just extracts the layer as considering 4 pillar(2rows and 2 coloumns) in the order is the necessity but.
+
+---------------------------------
+
+Second Approach - (Solution @ ) 
+Same broke the problem in 2 steps - 
+1. First is to extract all the layers in a 2D vector of int.(no need of list in this Approach as no rotation manually is been done)
+
+2. Instead of rotating the layer just change the starting_position of the each layer(as by default the start_pos of any vector is 0). So basically instead of manual rotation we start inputting the layers value from the start_pos which is real_rotation value initially.
+example : let layer be [1,2,3,4,5]
+and real_rotation = 2
+so after manually rotating we have [3,4,5,1,2]
+instead what we do is when we insert this layer in matrix again we start with the start_pos=real_rotation=2 and input the full layer so on. And when the last position encounter we reset the start_pos=0.
+
+---------------------------------
+
+Important - 
+To optimise the solution more just find the acutual rotation(r) value i.e. real_r as after a number of rotation it is being repeated.
+Example - 
+like for layer - [1,2,3,4,5]
+and rotation r = 9;
+the actual rotation real_r = r % layer.size() = 9/5 =4
+so like real_r means that rotating the layer 4 times and 9 times gives same result so why not do 4 times only to optimize.
+
+And in second approach it will be used only for position as no actually rotation takes place in 2nd approach.
+ 
+
+That's it!
+-----------------------------------------------------------------
+
+
+Thanks for your patience,
+Queries Related to Logic or code  @ https://www.linkedin.com/in/ayush-chaudhari/
+Follow me on Github @ https://github.com/ayushchaudhari
+Follow me on Hacker Rank @ Ayush_Chaudhari
+Ayush Chaudhari
