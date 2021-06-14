@@ -41,7 +41,7 @@ How many layers are there for that I derived a formula -
 
 
 ---------------------------LOGIC----------------------------------
-First Aprroach - (Solution @ )
+First Aprroach - (Solution @ https://git.io/JnUnF)
 I broke the problem in 2 steps -
 1. First is to extract all the layers from the given m*n matrix in a 2D vector containing 1D list of layers.
 2. Rotating the list of the layers and after doing the appropriate number of rotation just input that layers as it is in matrix, in the same way as they were being extracted.
@@ -50,7 +50,7 @@ Note-  So the four for loop just extracts the layer as considering 4 pillar(2row
 
 ---------------------------------
 
-Second Approach - (Solution @ ) 
+Second Approach - (Solution @ https://git.io/JnUcm) 
 Same broke the problem in 2 steps - 
 1. First is to extract all the layers in a 2D vector of int.(no need of list in this Approach as no rotation manually is been done)
 
