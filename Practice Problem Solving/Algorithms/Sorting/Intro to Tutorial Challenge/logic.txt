@@ -1,0 +1,23 @@
+Logic for problem given @ https://www.hackerrank.com/challenges/tutorial-intro/problem
+
+Data Structures used - 
+1. String
+2. Vector of Integers
+
+----------------------------------------------------------------------------------------------------------------
+
+Logic - 
+
+The problem is very easy to solve.
+
+1. First approach can be to directly iterated over the sorted array and whenever you get the element V in the array just return the position wherever you are at that point.
+
+2. Second approach will optimize the problem a bit. You can calculate the difference of V from the last and first element of array. So with whichever(first or last element) the difference is less we start iterating for the element from that side which optimize the problem a bit.
+
+That's it!
+
+----------------------------------------------------------------------------------------------------------------
+Follow me on Github @ https://github.com/ayushchaudhari
+Follow me on Linked In @ https://www.linkedin.com/in/ayush-chaudhari/
+Follow me on Hacker Rank @ https://www.hackerrank.com/Ayush_Chaudhari
+Ayush Chaudhari
