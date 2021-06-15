@@ -1,0 +1,33 @@
+Problem @ https://www.hackerrank.com/challenges/camelcase/problem
+
+Data Structures Used-
+1. String
+
+Main Inbuilt Functions used-
+1. push_back() - to push in string
+2. getline()- to take the whole string input in one line
+3. size() - to get the size of the string 
+
+
+---------------------------LOGIC----------------------------------
+Just iterate over the full string and if the current letter is greater than or same as A and less than or same as Z then it should be considered as the starting of the word that means there is a word. So add 1 to the words variable.
+So total capital letters in the string is the number of words and 1 word is starting as given which does'nt start with capital letter so return word+1 as we have to consider that word also.
+
+Pseudo Code of camel case function - 
+1. words=0
+
+2. Iterate over each character of the string
+2.1. if string[i]>='A' or string[i]<='Z' then
+2.1.1. increment words by 1
+
+3. return words+1
+
+That's it!
+-----------------------------------------------------------------
+
+
+Thanks for your patience,
+Queries Related to Logic or code @ https://www.linkedin.com/in/ayush-chaudhari/
+Follow me on Github @ https://github.com/ayushchaudhari
+Follow me on Hacker Rank @ https://www.hackerrank.com/Ayush_Chaudhari
+Ayush Chaudhari
