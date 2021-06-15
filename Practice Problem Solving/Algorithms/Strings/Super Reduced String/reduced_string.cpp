@@ -1,6 +1,7 @@
 //Problem @ https://www.hackerrank.com/challenges/reduced-string/problem
 //A CPP Solution by Ayush Chaudhari
-//Logic Explained @ O(n)
+//Logic Explained @ https://git.io/Jn3VL
+//Time Complexity = O(n)
 
 #include <bits/stdc++.h>
 
