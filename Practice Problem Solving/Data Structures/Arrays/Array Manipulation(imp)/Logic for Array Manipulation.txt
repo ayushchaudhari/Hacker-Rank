@@ -1,0 +1,62 @@
+Problem @ https://www.hackerrank.com/challenges/crush/problem
+
+Data Structures Used-
+1. String
+2. Vector
+
+
+Main Inbuilt Functions used-
+1. push_back() - to push in string
+2. getline()- to take the whole string input in one line 
+3. max(a,b) - to get maximum of a & b
+
+---------------------------LOGIC----------------------------------
+query is of the type -> a b k where a,b is range inclusive and k is the value/summond
+The logic is just related to range given in query.
+1. So what we do? 
+In arr(size=n), we just add the k=value @ location=lower bound i.e. @ a and add negative of k @ location=upper_bound +1(b+1).
+And we do the above step iterative for each query.
+
+2. So what happens is-
+When we sum the arr from i=0 to i=n. So in certain range a to b we consider k only once and as the range gets over we have added negative of k so it automatically get subtracted. So now after that we would be getting the total as per the position/location as total of k's in whichever queries that location must be included/inclusive.
+The remaining location of arr may be zero.
+
+Example - 
+let there be 3 queries:
+5 3
+2 3 5
+4 5 6
+1 3 4
+
+So we initialize arr ={0,0,0,0,0}
+So now for each query we add the summond @ location a and add negative of it @ b+1 location.(but relatively as the array index starts with 0 so the values will shift left by 1 i.e. a get a-1 and b+1 gets b)
+a. adding 5 @ a-1=2-1=1 and adding -5 @ b=3
+arr={0,5,0,-5,0}
+
+b. adding 6 @ a-1=4-1=3 and adding -6 @ b=5 but b not <n so will  not add -6 as range of value 6 will last till the end
+arr={0,5,0,-5+6,0} = {0,5,0,1,0}
+
+c. adding 4 @ a-1=1-1=0 and adding -4 @ b=3
+arr={4,5,0,1-4,0}={4,5,0,-3,0}
+
+Now if we see the array arr in the ranges given in query the summond remains same if we cummulatively add arr[i] in the range. So this logic help us to get the maximum_value easily.
+
+3. After that just calculate cumulative sum for each value in arr and keep track of maximum sum every time you do it.
+
+4. Then just return the maximum value.
+
+That's it!
+-----------------------------------------------------------------
+
+-----------------------------------------------------------------
+This may also be useful I saw this explaination when I try to read the discussion for new approaches - Explained by - https://www.hackerrank.com/guangzefrio
+We can try to understand this logic like we imagine Supermario walking on a N width horiz line. a and b is the point on the line, k is the mushroom Mario always like to eat. When Mario go to the point at a,he eat the k size mushroom and become taller,after he have walked through point b, his height reverse to the origin height before he eat the mushroom. eg. 1. When Mario is walking to a, he eat a k size mushroom, and become k bigger 2. Then Mario is walking to a', he eat a k' size mush, and become k' bigger, now Mario's height is (k + k') 3. If Mario have walked to b, so he pooped out the mushroom and become k smaller, the only way that he can become larger is to meet a new (a,b) point and eat a new k size mushroom 4. The rest can be done in the same manner.
+
+-----------------------------------------------------------------
+
+Thanks,
+Queries Related to Logic or code you can contact me on below handles.
+Connect with me on Linked In - https://www.linkedin.com/in/ayush-chaudhari/
+Follow me on Github @ https://github.com/ayushchaudhari
+Follow me on Hacker Rank @ https://www.hackerrank.com/Ayush_Chaudhari
+Ayush Chaudhari
