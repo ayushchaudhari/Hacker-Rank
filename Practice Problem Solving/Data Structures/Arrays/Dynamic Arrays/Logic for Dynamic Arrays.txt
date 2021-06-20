@@ -1,0 +1,40 @@
+Problem @ https://www.hackerrank.com/challenges/dynamic-array
+
+Data Structures Used-
+1. String
+2. Vector
+
+Main Inbuilt Functions used-
+1. push_back()
+2. getline()- to take the whole string input in one line 
+
+---------------------------LOGIC----------------------------------
+The logic is pretty simple just the language of question is so confusing!!
+1. Just we have to make a 2D array of size n containing n empty 1D arrays.
+
+2. Initialize lastAnswer with 0
+
+3. Declare Answers array/vector
+
+2. So there are 2 types of queries and for every query on the basis of its type we have to perform this till each query is executed- 
+2.1 query 1 - 1 a b
+2.1.1 initialize; idx = ((a^lastAns)%n)  {^ represents XOR in code}
+2.1.2 Append b @ arr[idx] i.e. push_back in 1D array present at idx.
+
+2.2 query 2 - 2 a b
+2.2.1 initialize; idx=((a^lastAns)%n)
+2.2.2 Assign lastAns as arr[idx][b % arr[idx].size()]
+i.e. lastAns = arr[idx][b % arr[idx].size()]
+2.2.2 Append the lastAns to Answers array.
+
+3. Return the Answers array at last.
+
+That's it!
+-----------------------------------------------------------------
+
+Thanks,
+Queries Related to Logic or code you can contact me on below handles.
+Connect with me on Linked In - https://www.linkedin.com/in/ayush-chaudhari/
+Follow me on Github @ https://github.com/ayushchaudhari
+Follow me on Hacker Rank @ https://www.hackerrank.com/Ayush_Chaudhari
+Ayush Chaudhari
