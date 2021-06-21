@@ -1,0 +1,49 @@
+Problem @ https://www.hackerrank.com/challenges/insertionsort2/problem
+
+
+Data Structures Used-
+1. String
+2. Vector of Integer
+
+Main Inbuilt Functions used-
+1. push_back() -  to push elements to the vector
+2. stoi() - converts string to integer
+
+Terminologies - 
+Insertion Sort - Insertion Sort is a type of sorting based on comparison and swaps. It has time complexity of n^2.
+Insertion sort works as per its name, it sorts the array at the time of insertion of the element only.
+
+Example - to sort given array using insertion sort
+array - [1,2,4,5,6,3]
+1. We will keep checking if each element is less than it next or not.
+2. If the current element is greater than next element then it means the next element must come before current element.
+3. So we save the next element as key and we shift current element to the next position.
+4. And we do this shifting of every element before the current till we get the correct position for the key(i.e. where key >element).
+1,2,4,5,6,6 key=3
+1,2,4,5,5,6 key=3
+1,2,4,4,5,6 key=3
+1,2,3,4,5,6 sorted
+
+---------------------------LOGIC----------------------------------
+Pseudo Code - (Insertion Sort)
+1. for every element in arr
+
+2. check if current element > next element
+2.1 if true 
+	2.1.1 store key= next element and j= current position
+	
+	2.1.2 check every element from position j to 0 that i.e. while(arr[j]>key) if true just push the arr[j] at next position i.e. arr[j+1]=arr[j] and decrement j.
+	
+	2.1.3 when we come out of while loop it means arr[j]<key i.e. we got the correct position of key. So store key @ arr[j+1].
+
+2.2 if false do not do anything as it is already sorted
+
+That's it!
+-----------------------------------------------------------------
+
+
+Thanks for your patience,
+Follow me on Github @ https://github.com/ayushchaudhari
+Follow me on Hacker Rank @ https://www.hackerrank.com/Ayush_Chaudhari
+Queries Related to Logic or code  @ https://www.linkedin.com/in/ayush-chaudhari/
+Ayush Chaudhari
