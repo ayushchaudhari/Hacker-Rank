@@ -1,0 +1,36 @@
+Problem @ https://www.hackerrank.com/challenges/arrays-ds/problem
+
+Data Structures Used-
+1. String
+2. Vector
+
+Main Inbuilt Functions used-
+1. push_back() - to push in int in vector
+2. getline()- to take whole line input in one line
+3. stoi() - converts string to integer
+4. size() - returns the size of vector & string
+
+Terminology - 
+The problem is based on the concept of reversing a array/vector.
+For example - arr[] = {1,2,3,4,5}
+after reversing the arr should be - {5,4,3,2,1}
+
+---------------------------LOGIC----------------------------------
+-> Simply to reverse a array we will iterate the given array elements in reverse direction i.e. from backwards or we can say from last elements.
+-> So we iterate the arr(shown above in terminology section) from 5->4->3->2->1 like this.
+-> And while iterating from the last to first element we will keep appending the element in the new vector named rev_vector.
+
+Pseudo Code - 
+1. declare rev_vector.
+2. for i in range of a.size()-1 to 0 (both inclusive) keep decrementing i and append arr[i] to rev_vector.
+3. return rev_vector.
+
+That's it!
+-----------------------------------------------------------------
+
+Thanks,
+Queries Related to Logic or code you can contact me on below handles.
+Connect with me on Linked In - https://www.linkedin.com/in/ayush-chaudhari/
+Follow me on Github @ https://github.com/ayushchaudhari
+Follow me on Hacker Rank @ https://www.hackerrank.com/Ayush_Chaudhari
+Ayush Chaudhari
