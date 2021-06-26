@@ -1,0 +1,48 @@
+Problem @ https://www.hackerrank.com/challenges/2d-array/problem
+
+Data Structures Used-
+1. String
+2. Vector
+
+Main Inbuilt Functions used-
+1. push_back() - to push in vector/string
+2. getline()- to take the whole line input as a string 
+3. stoi() - converts string to integer
+4. size() - returns the size of vector & string
+
+Terminology - 
+Hourglass -  What is hourglass?
+Basically in the problem statement it means the elements that are in the shape of hourglass we have to calculate there sum.
+We have to calculate the maximum sum among the sum of the all individual hour glasses.
+The shape of hourglass is like - 
+a b c
+  d
+e f g
+We have to calucate a+b+c+d+e+f+g for all such hour glasses present in the matrix and return the maximum of them.
+
+---------------------------LOGIC----------------------------------
+-> Very Simple it is, just for each coloumn of each row you have to find the respective hourglass starting with that element. And finding the sum of each of such hourglass and return maximum out of it.
+
+Like the below hourglass starts with a - 
+a b c
+  d
+e f g
+
+-> So to find the sum of every hourglass starting with a(consider a is at (row,col) index)-
+sum = arr[row][col] + arr[row][col+1] + arr[row][col+1] + arr[row+1][col+1] + arr[row+2][col] + arr[row+2][col+1] + arr[row+2][col+2] 
+So this above formula would capture all elements i.e. a,b,c,d,e,f,g.
+
+-> Just we have to apply this formula to calculate sum of each hourglass starting with a element having index (row,col) where every time row<total_rows-2 & col<total_col-2.
+
+-> And keep maintaing the maxSum at same time.
+-> At last return maximum sum.
+
+That's it!
+-----------------------------------------------------------------
+
+Thanks,
+Queries Related to Logic or code, you can contact me on below handles.
+Connect with me on Linked In - https://www.linkedin.com/in/ayush-chaudhari/
+Follow me on Github @ https://github.com/ayushchaudhari
+Follow me on Hacker Rank @ https://www.hackerrank.com/Ayush_Chaudhari
+Ayush Chaudhari
