@@ -1,0 +1,37 @@
+Problem @ https://www.hackerrank.com/challenges/array-left-rotation/problem
+
+Data Structures Used-
+1. String
+2. Vector
+
+
+Main Inbuilt Functions used-
+1. push_back() - to push in string
+2. getline()- to take the whole string input in one line 
+
+---------------------------LOGIC----------------------------------
+Just instead of rotating array left selecting one element at a time and inserting it at the back, I have just changed the starting index of the array which does the same work in O(1) of time is needed.
+Just do this.
+
+So what I actually did is- 
+Example - lets take an example of given array in test case -
+n=5 d=4 and array = {1,2,3,4,5}
+So instead of actually rotating the array, I just changed the index from where I print the resultant array.
+
+Algorithm Steps:
+
+1. I first do d=d%n because if the left rotation=n, then if we actually think we do not have to actually rotate the array. As after rotating also its same.
+Or if we consider 6 left moves then actually is same as when we rotate the array left by 6%5=1 move.
+So I would suggest do this before actually doing anything.
+
+2. After that we just print the whole array starting from that d to n & then 0 to d-1. Which actually means whole circular array from index d to d-1.
+
+Just that!!!
+-----------------------------------------------------------------
+
+Thanks,
+Queries Related to Logic or code you can contact me on below handles.
+Connect with me on Linked In - https://www.linkedin.com/in/ayush-chaudhari/
+Follow me on Github @ https://github.com/ayushchaudhari
+Follow me on Hacker Rank @ https://www.hackerrank.com/Ayush_Chaudhari
+Ayush Chaudhari
