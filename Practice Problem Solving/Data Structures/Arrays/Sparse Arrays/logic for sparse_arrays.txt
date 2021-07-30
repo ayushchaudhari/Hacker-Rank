@@ -1,0 +1,30 @@
+Problem @ https://www.hackerrank.com/challenges/sparse-arrays/problem
+
+Data Structures Used-
+1. Map
+2. String
+3. Vector
+
+Main Inbuilt Functions used-
+1. getline()- to take the whole string input in one line 
+2. map.find() -  to find the key in map or not
+3. map.insert() - to insert the pair in map
+4. make_pair() - to make the pair, so that it can be inserted into the map
+
+---------------------------LOGIC----------------------------------
+I thought of solving this question with O(n^2) of time complexity first which is easy way but a very time complex way to solve this.
+But the better way which I could thought of which is also a less time complex way to solve this problem is by using MAP we can solve this.
+Just store the every string in map while taking the input keeping string as key and its count as value which will be initially 1. If the string as a key already exists, than increment its counter by 1.
+After this take queries input normally. 
+For each query in queries check if the string already exists in the map or not. If it exists than the count shall be the value present @ that key in map. If not exists then just consider 0 as count for that. Save all this count in another result array/vector.
+Return the result vector
+
+Just that!!!
+-----------------------------------------------------------------
+
+Thanks,
+Queries Related to Logic or code you can contact me on below handles.
+Connect with me on Linked In - https://www.linkedin.com/in/ayush-chaudhari/
+Follow me on Github @ https://github.com/ayushchaudhari
+Follow me on Hacker Rank @ https://www.hackerrank.com/Ayush_Chaudhari
+Ayush Chaudhari
